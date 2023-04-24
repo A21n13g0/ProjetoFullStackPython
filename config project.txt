@@ -1,0 +1,6 @@
+python -m venv venv
+activate
+pip install Django
+django-admin startproject projectpythonfullstack
+python manage.py startapp app
+python manage.py runserver
