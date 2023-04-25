@@ -1,1 +1,1 @@
-web: gunicorn peoject.wsgi
+web: gunicorn projectpythonfullstack.wsgi --log-file -
