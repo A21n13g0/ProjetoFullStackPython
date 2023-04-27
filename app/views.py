@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.contrib.auth import authenticate, login
 from django.db.models import Q
 from app.forms import SupplierForm
 from app.models import Supplier
@@ -33,9 +34,6 @@ def create(request):
     if form.is_valid():
         form.save()
         return redirect('home')
-    else:
-        message = 'Erro'
-        redirect('create', {'message': message})
 
 def view(request, pk):
     data = {}
