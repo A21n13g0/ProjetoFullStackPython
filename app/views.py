@@ -1,5 +1,4 @@
-from django.shortcuts import render, redirect, render_to_response
-from django.contrib.auth import authenticate, login
+from django.shortcuts import render, redirect
 from django.db.models import Q
 from django.template import RequestContext
 from app.forms import SupplierForm
@@ -34,7 +33,7 @@ def create(request):
     form = SupplierForm(request.POST or None)
     if form.is_valid():
         form.save()
-        return render_to_response('home', context_instance=RequestContext(request))
+        return redirect('home')
 
 def view(request, pk):
     data = {}
