@@ -16,8 +16,6 @@
     </div>
     <div class="col-sm-8 m-auto pt-4 pb-2 text-center">
         <form name="form" id="form" action="{% if database %}/update/{{database.id}}/{% else %}/create/{% endif %}" method="post">
-            {% csrf_token %}
-            <anything_else>
             <div class="col-sm-2 m-auto col-form-label">Fornecedor: {{form.supplier}}</div>
             <div class="col-sm-2 m-auto col-form-label">Cnpj: {{form.cnpj}}</div>
             <div class="col-sm-2 m-auto col-form-label">Inscrição Estadual: {{form.stateRegistration}}</div>
