@@ -1,6 +1,7 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, render_to_response
 from django.contrib.auth import authenticate, login
 from django.db.models import Q
+from django.template import RequestContext
 from app.forms import SupplierForm
 from app.models import Supplier
 from django.core.paginator import Paginator
@@ -33,7 +34,7 @@ def create(request):
     form = SupplierForm(request.POST or None)
     if form.is_valid():
         form.save()
-        return redirect('home')
+        return render_to_response('home', context_instance=RequestContext(request))
 
 def view(request, pk):
     data = {}
