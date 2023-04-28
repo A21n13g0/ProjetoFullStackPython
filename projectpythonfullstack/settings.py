@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-(tvimq3s!_pxfi_ouf2z^2^a84-nxidll!^3#)p-u1re=v4r1y
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-CSRF_TRUSTED_ORIGINS = ['https://projetofullstackpython-production.up.railway.app/']
+CSRF_TRUSTED_ORIGINS = ['https://projetofullstackpython-production.up.railway.app']
 
 
 # Application definition
